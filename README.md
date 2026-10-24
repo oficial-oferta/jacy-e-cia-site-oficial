@@ -1,10 +1,10 @@
 # Jacy & Cia — Centro de Beleza
 
-V1 do site oficial da Jacy & Cia, em Betim (MG). A Home destaca terapia capilar e direciona todos os agendamentos ao WhatsApp oficial.
+V2 do site oficial da Jacy & Cia, em Betim (MG). A Home destaca terapia capilar e direciona todos os agendamentos ao WhatsApp oficial.
 
 ## Páginas
 - Início, com área especial para terapia capilar, serviços, galeria de trabalhos reais e o ambiente
-- 9 páginas individuais: terapia capilar, mechas, progressiva, hidratação, cortes e escovas, manicure e pedicure, massagem, sobrancelhas e pigmentação, estética e bem-estar
+- 9 páginas individuais originais, mais páginas de categorias, cílios e Dia da Noiva: terapia capilar, mechas, progressiva, hidratação, cortes e escovas, manicure e pedicure, massagem, sobrancelhas e pigmentação, estética e bem-estar
 
 ## SEO e performance
 - HTML estático, sem framework client-side, JavaScript mínimo
@@ -38,7 +38,7 @@ Preto, dourado e creme. O cabeçalho usa adaptação vetorial/typográfica simpl
 ## Contato
 WhatsApp oficial: +55 31 99267-6485. Mensagem predefinida: "Olá, vim do site e gostaria de marcar um horário."
 
-## Pendências para V2
+## Próximas confirmações
 - Confirmar serviços e modalidades atualizados, incluindo massagem e procedimentos estéticos;
 - Inserir fotos específicas de terapia capilar, manicure, massagem e estética;
 - Adicionar logo final (idealmente SVG e PNG transparente);
