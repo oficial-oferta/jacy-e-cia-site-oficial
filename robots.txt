@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oficial-oferta.github.io/jacy-e-cia-site-oficial/sitemap.xml
