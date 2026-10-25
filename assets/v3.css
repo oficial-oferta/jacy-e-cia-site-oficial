@@ -51,8 +51,8 @@ a,button,summary{-webkit-tap-highlight-color:transparent}
 .nav.is-scrolled{background:rgba(255,252,247,.97);box-shadow:0 12px 32px rgba(58,38,20,.1);border-color:rgba(164,125,78,.3)}
 .navrow{transition:min-height .32s cubic-bezier(.2,.8,.2,1)}
 .nav.is-scrolled .navrow{min-height:70px}
-.brandword{color:#3c2b21}.branddesc{color:#8e6e4b}
-.brandmark{background:#fcf4e8;-webkit-background-clip:border-box;background-clip:border-box;color:#79562f;-webkit-text-fill-color:#79562f;border-color:#c39d68;box-shadow:0 0 0 5px #cba56d1a}
+.nav .brandword{color:#3c2b21}.nav .branddesc{color:#8e6e4b}
+.nav .brandmark{background:#fcf4e8;-webkit-background-clip:border-box;background-clip:border-box;color:#79562f;-webkit-text-fill-color:#79562f;border-color:#c39d68;box-shadow:0 0 0 5px #cba56d1a}
 .navlinks>a,.nav-dropdown>summary{color:#403126;transition:color .25s,background .25s}
 .navlinks>a:hover,.nav-dropdown>summary:hover{color:#9c6d33}
 .dropdown-panel{background:#fffcf6;border:1px solid #e3d1bb;box-shadow:0 24px 45px #49342321;border-radius:16px;overflow:hidden}
