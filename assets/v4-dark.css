@@ -1,0 +1,110 @@
+/* Jacy & Cia — identidade oficial preto e dourado. */
+:root{--brand-black:#080706;--brand-espresso:#17110d;--brand-espresso-2:#24190f;--brand-gold:#d7ae63;--brand-gold-light:#f4dea9;--brand-ivory:#f7efe2;--brand-muted:#c9bda9}
+body{background:var(--brand-black);color:var(--brand-ivory)}
+.topbar{background:#030303;color:#d6b875;border-bottom:1px solid #d7ae632b}
+.nav,.nav.is-scrolled{background:rgba(5,4,3,.97);border-color:#d7ae6340;box-shadow:0 14px 34px #0005;color:var(--brand-ivory)}
+.nav .brandword,.foot .brandword{color:#ead39b}
+.nav .branddesc,.foot .branddesc{color:#bca781}
+.brandmark,.nav .brandmark{display:grid;place-items:center;width:66px;height:50px;flex:none;background:transparent;border:0;border-radius:0;box-shadow:none;-webkit-background-clip:border-box;background-clip:border-box}
+.brandmark img{display:block;width:100%;height:100%;object-fit:contain}
+.navlinks>a,.nav-dropdown>summary{color:#f1e9d9}
+.navlinks>a:hover,.nav-dropdown>summary:hover{color:var(--brand-gold-light)}
+.dropdown-panel{background:#17110d;border-color:#d7ae634a}
+.dropdown-panel a{color:#f0e3d0}
+.dropdown-panel a:hover{background:#392918;color:#ffdfa1}
+.menu{background:#16100c;color:#e8c783;border-color:#987144}
+.navcta{background:linear-gradient(115deg,#f3d998,#c69749);color:#1a110a}
+
+/* Primeira dobra: marca oficial, quatro cuidados, noiva como um deles. */
+.hero-luxe{background:radial-gradient(circle at 78% 20%,#392717 0,transparent 40%),radial-gradient(circle at 5% 95%,#21180f 0,transparent 40%),linear-gradient(120deg,#080706,#17100b 72%,#100b08);color:var(--brand-ivory)}
+.hero-luxe:before{opacity:.35;background-image:radial-gradient(#cba96d34 .6px,transparent .6px)}
+.hero-luxe-grid{min-height:700px}
+.hero-luxe h1{color:#f7eedf}
+.hero-luxe h1 em{background:linear-gradient(100deg,#f4dea9,#d2a95f,#f1d48d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-deck{color:#d2c5b2}
+.overline,.hero-scroll-cue{color:#e5c687}
+.overline .line{background:#d7ae63}
+.hero-luxe .text-link{color:#f0d8a5;border-color:#d7ae63}
+.hero-signature{margin-top:36px}
+.hero-signature img{width:116px;height:96px;object-fit:contain;mix-blend-mode:screen}
+.hero-signature small{color:#c5ad84;max-width:210px}
+.hero-portrait-frame{background:#110d0a;border:1px solid #cda45e;box-shadow:0 30px 70px #0008}
+.hero-portrait-frame:after{pointer-events:none;z-index:3;box-shadow:inset 0 0 0 1px #e7c88888}
+.hero-portrait-frame img{animation:none}
+.hero-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.045);transition:opacity .85s ease,transform 5.4s ease;pointer-events:none}
+.hero-slide.is-active{opacity:1;transform:scale(1);z-index:1}
+.hero-detail{border-color:#17100c;box-shadow:0 20px 45px #0008}
+.hero-detail span{background:#080706df;color:#e8ce95}
+.hero-gold-arc{border-color:#e5bd73a8}
+.hero-service-links{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 0;max-width:580px}
+.hero-service-links a{display:inline-flex;align-items:center;padding:9px 13px;border:1px solid #d7ae6370;border-radius:100px;color:#f0dfbd;background:#d7ae6312;font-size:12px;text-decoration:none;transition:background .25s,color .25s,transform .25s}
+.hero-service-links a:hover,.hero-service-links a:focus-visible{background:#d7ae63;color:#1c1209;transform:translateY(-2px)}
+.hero-slide-badge{position:absolute;z-index:5;right:2%;bottom:9%;padding:11px 15px;border:1px solid #d8b47082;border-radius:14px;background:#0a0706d9;backdrop-filter:blur(8px);color:#f4dfa9;font-size:12px;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 12px 28px #0005}
+.hero-slide-controls{position:absolute;z-index:6;right:2%;bottom:1%;display:flex;align-items:center;gap:11px;color:#e9ce92;font:600 12px/1 Arial,sans-serif;letter-spacing:.12em}
+.hero-slide-controls button{display:grid;place-items:center;width:30px;height:30px;border:1px solid #d7ae638c;border-radius:50%;background:#0b0806d9;color:#efd5a0;cursor:pointer}
+.hero-slide-controls button:hover,.hero-slide-controls button:focus-visible{background:#d7ae63;color:#1a120a}
+.lux-ribbon{background:#ad8143;color:#140e08;border-color:#e6c789}
+.lux-ribbon i{color:#3f2a11}
+
+/* Serviços prioritários e seções: contraste rico sem excesso de efeitos. */
+.lux-intro{background:linear-gradient(180deg,#100d0b,#1a130e);color:#f6ead8}
+.lux-heading-row>p,.work-heading p{color:#c7b9a6}
+.section-title em,.therapy-luxe-copy h2 em,.salon-copy h2 em{color:#d9b374}
+.experience-card{border:1px solid #d7ae6338}
+.experience-text-card{background:linear-gradient(155deg,#332416,#1b140f);border-color:#ad824a;color:#f7ead4}
+.experience-text-card p{color:#f5e7d2}
+.experience-text-links a{color:#e5c88f;border-color:#d7ae6359}
+.experience-text-links a:hover{color:#fff0c7}
+.therapy-luxe{background:linear-gradient(125deg,#291d13,#130f0c 74%);color:#f7ebd8}
+.therapy-luxe-copy p,.therapy-luxe li{color:#d4c3ad}
+.therapy-luxe-copy h2{color:#fbf0df}
+.therapy-luxe li{border-color:#d7ae6338}
+.therapy-actions .button.dark{background:linear-gradient(115deg,#f0d58e,#c99a4d);color:#170f08}
+.therapy-actions .text-link{color:#e9c889;border-color:#b98c4b}
+.therapy-letter{color:#d7ae6314}
+.therapy-photo{border:1px solid #d8b16c}
+.therapy-accent{background:#160f0b;border:1px solid #dfbb76}
+.work-section{background:#0d0b09;color:#f7ead8}
+.work-track figure{background:#211810;border:1px solid #d7ae633b}
+.work-track figcaption{background:#211810;color:#eed7aa}
+.gallery-controls button{background:#211810;color:#e5c282;border-color:#a77c45}
+.gallery-controls button:hover{background:#d7ae63;color:#160e08}
+.gallery-note{color:#bcae99}
+.bridal-luxe{background:radial-gradient(circle at 80% 30%,#402914,#120d0a 65%);border-top:1px solid #d7ae633b}
+.salon-section{background:linear-gradient(125deg,#21170f,#100d0b);color:#f7ead8}
+.salon-copy p{color:#d0c0a9}
+.salon-copy .text-link{color:#edce90;border-color:#aa814c}
+.salon-image{background:#1c130d;border:1px solid #d7ae63}
+.closing-luxe{background:radial-gradient(circle at 50% 0,#4a321c,#090706 75%)}
+.foot{border-top:1px solid #d7ae6344}
+
+/* As páginas internas conservam conteúdo e recebem a mesma assinatura escura. */
+body[data-page] .page-hero{background:radial-gradient(circle at 80% 30%,#3d2918,#100c09 68%);color:#f7ead8}
+body[data-page] .page-hero p{color:#d2c2ab}
+body[data-page] .page-hero h1{color:#f9efdf}
+body[data-page] .page-hero h1 span[style]{color:#e0b86f!important}
+body[data-page] .crumb,body[data-page] .crumb a,body[data-page] .label-chip{color:#e1c083}
+body[data-page] .label-chip{border-color:#bc904f}
+body[data-page] .page-hero img{border:1px solid #d1a65e;box-shadow:0 28px 55px #0009}
+body[data-page] .page-hero-ornament{border-color:#b78c4b}
+@media(max-width:850px){
+  .navlinks.open{background:#100c09;border-top-color:#d7ae6340;box-shadow:0 18px 32px #0008}
+  .navlinks>a,.nav-dropdown>summary{color:#f1e6d5;border-bottom-color:#d7ae633d}
+  .dropdown-panel{background:#281a10}
+  .dropdown-panel a{color:#f2ddb8}
+}
+@media(max-width:700px){
+  .hero-luxe-grid{padding-top:24px}
+  .hero-luxe h1{font-size:clamp(46px,11vw,67px)}
+  .hero-service-links{gap:7px}
+  .hero-service-links a{padding:8px 11px}
+  .hero-signature img{width:92px;height:78px}
+  .hero-slide-badge{right:3%;bottom:11%;font-size:10px;max-width:155px}
+  .hero-slide-controls{right:3%;bottom:1%}
+  .hero-detail{left:-2%}
+  .brandmark,.nav .brandmark{width:55px;height:42px}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-slide{transition:none!important;transform:none!important}
+  .hero-service-links a{transition:none}
+}
