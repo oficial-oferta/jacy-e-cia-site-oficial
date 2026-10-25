@@ -38,3 +38,127 @@ body[data-page="cabelos"] .page-hero{background:#ead5bf}body[data-page="olhar"] 
 
 .interior-panel{min-height:375px;display:flex;flex-direction:column;justify-content:space-between;padding:37px;background:linear-gradient(145deg,#251b15,#5a3c25);color:#e8c990;position:relative;overflow:hidden}.interior-panel:after{content:"JC";position:absolute;right:-30px;bottom:-100px;font:italic 310px/.8 var(--font);color:#e7c58c18}.interior-panel strong{font:normal clamp(38px,4vw,61px)/1.06 var(--font);max-width:440px;position:relative;z-index:1}.interior-panel small{font-size:11px;text-transform:uppercase;letter-spacing:.2em;position:relative;z-index:1}.interior-editorial-media.single{grid-template-columns:1fr}.interior-editorial-media.single img{width:100%;height:100%;margin:0}.interior-editorial-media.single:after{content:"";position:absolute}.interior-editorial:nth-of-type(even){background:#f0e3d2}body[data-page="olhar"] .interior-editorial-media,body[data-page="dia-da-noiva"] .interior-editorial-media,body[data-page="sobrancelhas-e-pigmentacao"] .interior-editorial-media{order:-1}body[data-page="unhas"] .interior-panel{background:linear-gradient(145deg,#473024,#c5a07c)}body[data-page="massagem"] .interior-panel,body[data-page="bem-estar"] .interior-panel{background:linear-gradient(145deg,#292e2a,#a29a7b)}.related-services .eyebrow{color:#d2ad73}
 @media(max-width:850px){body[data-page="olhar"] .interior-editorial-media,body[data-page="dia-da-noiva"] .interior-editorial-media,body[data-page="sobrancelhas-e-pigmentacao"] .interior-editorial-media{order:-1}}
+
+/* V4 — leveza contemporânea. Sobrepõe a camada editorial sem alterar o conteúdo. */
+:root{--v4-ink:#2b211b;--v4-accent:#a67843;--v4-line:#dcc7ac;--v4-surface:#fffdf9}
+body{background:#fbf8f3}
+a,button,summary{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid #a67843;outline-offset:4px}
+::selection{background:#e7caa0;color:#271b12}
+
+/* Cabeçalho claro e compacto ao rolar. */
+.nav{background:rgba(255,252,247,.93);color:var(--v4-ink);border-bottom:1px solid rgba(164,125,78,.2);box-shadow:0 3px 16px rgba(58,38,20,.045);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);transition:background .3s,box-shadow .3s,border-color .3s}
+.nav.is-scrolled{background:rgba(255,252,247,.97);box-shadow:0 12px 32px rgba(58,38,20,.1);border-color:rgba(164,125,78,.3)}
+.navrow{transition:min-height .32s cubic-bezier(.2,.8,.2,1)}
+.nav.is-scrolled .navrow{min-height:70px}
+.brandword{color:#3c2b21}.branddesc{color:#8e6e4b}
+.brandmark{background:#fcf4e8;border-color:#c39d68;box-shadow:0 0 0 5px #cba56d1a}
+.navlinks>a,.nav-dropdown>summary{color:#403126;transition:color .25s,background .25s}
+.navlinks>a:hover,.nav-dropdown>summary:hover{color:#9c6d33}
+.dropdown-panel{background:#fffcf6;border:1px solid #e3d1bb;box-shadow:0 24px 45px #49342321;border-radius:16px;overflow:hidden}
+.dropdown-panel a{color:#403126;border-radius:8px}.dropdown-panel a:hover{background:#f3e7d6;color:#68451f}
+.menu{color:#503922;border-color:#d5b98e;border-radius:12px;background:#fff9ef}
+.navcta,.button.gold{position:relative;overflow:hidden}
+.navcta:after,.button.gold:after{content:"";position:absolute;top:-50%;left:-75%;width:44%;height:200%;transform:rotate(24deg);background:linear-gradient(90deg,transparent,#fff9,transparent);transition:left .65s}
+.navcta:hover:after,.button.gold:hover:after{left:130%}
+
+/* Primeira dobra: mais espaço, profundidade e movimento contido. */
+.hero-luxe{background:radial-gradient(circle at 78% 20%,#f4e2c9 0,transparent 34%),linear-gradient(115deg,#fffdf9 0,#f5ebdd 68%,#e9d6bc 100%)}
+.hero-luxe-grid{min-height:690px}
+.hero-luxe h1{letter-spacing:-.062em}
+.hero-luxe h1 em{background:linear-gradient(100deg,#ab793b,#c59b62,#8e5d2f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-portrait-frame{border-radius:310px 310px 34px 34px;box-shadow:0 32px 68px #80624935;transition:box-shadow .45s,transform .55s cubic-bezier(.2,.8,.2,1)}
+.hero-luxe-media:hover .hero-portrait-frame{transform:translateY(-7px);box-shadow:0 42px 80px #80624940}
+.hero-portrait-frame img{animation:heroBreath 12s ease-in-out infinite alternate}
+.hero-detail{border-radius:22px;border-color:#fffaf3;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.hero-luxe-media:hover .hero-detail{transform:translateY(8px) rotate(-2deg)}
+.hero-detail span{backdrop-filter:blur(6px)}
+.hero-gold-arc{border-color:#b88e57aa}
+.hero-signature{margin-top:54px}
+.hero-scroll-cue{animation:cueFloat 2.8s ease-in-out infinite}
+@keyframes heroBreath{to{transform:scale(1.045)}}
+@keyframes cueFloat{50%{transform:translate(-50%,6px)}}
+
+/* Cards e serviços: formas mais suaves e feedback visual. */
+.lux-intro{background:linear-gradient(180deg,#fffcf7,#fffaf4)}
+.experience-layout{gap:18px}
+.experience-card,.experience-text-card{border-radius:26px}
+.experience-card{box-shadow:0 18px 45px #35221916;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.experience-card:hover,.experience-card:focus-visible{transform:translateY(-8px);box-shadow:0 26px 52px #35221932}
+.experience-card-content{bottom:30px}
+.experience-text-card{background:linear-gradient(150deg,#f2e3cf,#dfc39c);border-color:#ddc5a3}
+.experience-text-links a{transition:padding-left .25s,color .25s}
+.experience-text-links a:hover{color:#805322}
+
+/* Terapia capilar: duas fotografias reais, sem repetir a sala como único foco. */
+.therapy-luxe{background:linear-gradient(130deg,#efe2d0,#faf5ed 70%)}
+.therapy-luxe-visual{isolation:isolate}
+.therapy-photo{left:4%;width:66%;height:87%;transform:rotate(-3deg);border-radius:20px;overflow:hidden;box-shadow:0 25px 55px #6d52382b}
+.therapy-photo img{border-radius:13px}
+.therapy-accent{position:absolute;z-index:2;right:1%;bottom:9%;width:39%;height:50%;padding:8px;background:#fffaf3;border-radius:21px;box-shadow:0 18px 44px #49331c44;transform:rotate(4deg);transition:transform .45s}
+.therapy-accent img{width:100%;height:100%;object-fit:cover;border-radius:14px}
+.therapy-luxe-visual:hover .therapy-accent{transform:rotate(0) translateY(-7px)}
+.therapy-letter{right:-4%;color:#bd985e1d}
+.therapy-photo-caption{z-index:3;left:0;bottom:0;border-radius:12px;padding:15px 18px}
+.therapy-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px 26px}
+.therapy-actions .text-link{color:#684929}
+.therapy-luxe li span{color:#a67439}
+
+/* Portfólio, noivas e espaço. */
+.work-section{background:#fffdf9}
+.work-track{gap:20px}
+.work-track figure{border-radius:22px;box-shadow:0 10px 28px #3c27121a;transition:transform .35s,box-shadow .35s}
+.work-track figure:hover{box-shadow:0 18px 36px #3c27112b}
+.work-track figcaption{background:#fff9f0}
+.gallery-controls button{box-shadow:0 4px 14px #4a332015}
+.bridal-luxe{background:radial-gradient(circle at 82% 38%,#403026 0,#1c1511 58%,#120f0e 100%)}
+.bridal-main{border-radius:300px 300px 26px 26px}
+.bridal-small{border-radius:20px;border-color:#231914}
+.salon-section{background:#f0e3d1}
+.salon-image{border-radius:24px;padding:10px;background:#fff9f0;box-shadow:0 26px 55px #6d4c2d24}
+.salon-image img{border-radius:15px}
+.salon-image-caption{border-radius:14px}
+.closing-luxe{background:radial-gradient(circle at 50% 0,#543b29,#1a1411 66%)}
+
+/* Páginas internas — mesmo acabamento da home. */
+.page-hero{background:linear-gradient(115deg,#fffaf4,#ecddc8)}
+.page-hero img{border-radius:260px 260px 28px 28px;filter:none;box-shadow:0 30px 58px #5f442d29}
+.page-hero-ornament{border-radius:230px 230px 25px 25px}
+.detail-side,.category-link,.faq details,.related-grid a,.interior-panel{border-radius:18px}
+.category-link{box-shadow:0 8px 22px #4f341014}
+.category-link:hover{transform:translateY(-5px);box-shadow:0 18px 32px #4f341028}
+.faq details{padding:18px 22px;margin:8px 0;background:#fffaf3;border:1px solid #e4d5bf}
+.faq details:hover{background:#f6ebdb}
+.interior-editorial-media img{border-radius:18px}
+.related-grid a{min-height:156px}
+.related-grid a:hover{transform:translateY(-5px)}
+body[data-page="dia-da-noiva"] .page-hero{background:radial-gradient(circle at 70% 30%,#453228,#1b1412 65%)}
+
+/* Mobile: movimento discreto, CTAs fáceis de usar e nada cortado. */
+@media(max-width:850px){
+  .navlinks.open{background:#fffcf7;border-top:1px solid #e6d4bc;box-shadow:0 22px 35px #33201426}
+  .navlinks>a,.nav-dropdown>summary{color:#46352a;border-bottom-color:#eadcc8}
+  .dropdown-panel{position:static;background:#f8eee1;box-shadow:none;border:0;border-radius:10px}
+  .dropdown-panel a{color:#46352a}
+}
+@media(max-width:700px){
+  .nav.is-scrolled .navrow{min-height:66px}
+  .hero-luxe-grid{padding-top:38px}
+  .hero-luxe-media{height:410px}
+  .hero-portrait-frame{width:77%}
+  .hero-detail{width:37%;height:43%;border-width:6px}
+  .hero-signature{margin-top:35px}
+  .experience-card,.experience-text-card{border-radius:21px}
+  .therapy-photo{width:67%;left:2%}
+  .therapy-accent{width:43%;height:47%;right:0}
+  .therapy-photo-caption{bottom:-7px;max-width:220px;line-height:1.5}
+  .therapy-actions{align-items:flex-start;flex-direction:column}
+  .work-track figure:nth-child(even){transform:none}
+  .salon-image{padding:8px}
+  .salon-image-caption{left:0;bottom:18px}
+  .page-hero img{border-radius:190px 190px 24px 24px}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-portrait-frame img,.hero-scroll-cue{animation:none!important}
+  .hero-portrait-frame,.hero-detail,.therapy-accent,.experience-card,.work-track figure{transition:none!important}
+}
