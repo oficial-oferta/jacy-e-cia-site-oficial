@@ -2,33 +2,59 @@ document.addEventListener("DOMContentLoaded",()=>{const stickyNav=document.query
 
 document.addEventListener("DOMContentLoaded",()=>{
   const frame=document.querySelector(".hero-portrait-frame");
-  const slides=frame?[...frame.querySelectorAll(".hero-slide")]:[];
-  if(slides.length<2)return;
+  if(!frame)return;
+  const slides=[...frame.querySelectorAll(".hero-slide")];
   const media=document.querySelector(".hero-luxe-media");
+  if(slides.length<2||!media)return;
   const count=media.querySelector("[data-hero-count]");
   const caption=media.querySelector("[data-hero-caption]");
-  const names=["Mechas e luzes","Progressiva","Terapia capilar","Dia da noiva"];
+  const previous=media.querySelector("[data-hero-prev]");
+  const next=media.querySelector("[data-hero-next]");
+  const toggle=media.querySelector("[data-hero-toggle]");
+  const labels=["Mechas e luzes","Progressiva","Terapia capilar","Dia da noiva"];
   const reduced=window.matchMedia("(prefers-reduced-motion: reduce)");
-  let index=0,timer=null,paused=false;
-  function show(next){
-    index=(next+slides.length)%slides.length;
+  const finePointer=window.matchMedia("(hover: hover) and (pointer: fine)");
+  let current=0,interval=null,hoverPaused=false,userPaused=reduced.matches;
+
+  function show(value){
+    current=(value+slides.length)%slides.length;
     slides.forEach((slide,i)=>{
-      const active=i===index;
+      const active=i===current;
       slide.classList.toggle("is-active",active);
       slide.setAttribute("aria-hidden",String(!active));
     });
-    count.textContent=String(index+1).padStart(2,"0")+" / "+String(slides.length).padStart(2,"0");
-    caption.textContent=names[index]||"Jacy & Cia";
+    if(count)count.textContent=String(current+1).padStart(2,"0")+" / "+String(slides.length).padStart(2,"0");
+    if(caption)caption.textContent=labels[current]||"Jacy & Cia";
   }
-  function stop(){if(timer){window.clearInterval(timer);timer=null}}
-  function start(){stop();if(!paused&&!reduced.matches&&!document.hidden)timer=window.setInterval(()=>show(index+1),5200)}
-  media.querySelector("[data-hero-prev]").addEventListener("click",()=>{show(index-1);start()});
-  media.querySelector("[data-hero-next]").addEventListener("click",()=>{show(index+1);start()});
-  media.addEventListener("mouseenter",()=>{paused=true;stop()});
-  media.addEventListener("mouseleave",()=>{paused=false;start()});
-  media.addEventListener("focusin",()=>{paused=true;stop()});
-  media.addEventListener("focusout",()=>{if(!media.contains(document.activeElement)){paused=false;start()}});
+  function stop(){
+    if(interval!==null){window.clearInterval(interval);interval=null}
+  }
+  function start(){
+    stop();
+    if(!userPaused&&!hoverPaused&&!document.hidden){
+      interval=window.setInterval(()=>show(current+1),4200);
+    }
+  }
+  function syncToggle(){
+    if(!toggle)return;
+    toggle.setAttribute("aria-pressed",String(userPaused));
+    toggle.setAttribute("aria-label",userPaused?"Retomar troca automática":"Pausar troca automática");
+    toggle.setAttribute("title",userPaused?"Retomar fotos":"Pausar fotos");
+    toggle.textContent=userPaused?"▶":"Ⅱ";
+  }
+  if(previous)previous.addEventListener("click",()=>{show(current-1);start()});
+  if(next)next.addEventListener("click",()=>{show(current+1);start()});
+  if(toggle)toggle.addEventListener("click",()=>{userPaused=!userPaused;syncToggle();start()});
+  // Evita que o toque no iPhone deixe o carrossel travado em estado de hover/foco.
+  media.addEventListener("mouseenter",()=>{
+    if(finePointer.matches){hoverPaused=true;stop()}
+  });
+  media.addEventListener("mouseleave",()=>{hoverPaused=false;start()});
   document.addEventListener("visibilitychange",start);
-  if(reduced.addEventListener)reduced.addEventListener("change",start);
-  show(0);start();
+  if(reduced.addEventListener){
+    reduced.addEventListener("change",()=>{userPaused=reduced.matches;syncToggle();start()});
+  }
+  show(0);
+  syncToggle();
+  start();
 });

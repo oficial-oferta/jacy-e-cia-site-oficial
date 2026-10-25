@@ -133,3 +133,21 @@ body[data-page] .page-hero-ornament{border-color:#b78c4b}
 .faq details{background:#261b13;color:#f7ead8;border-color:#a67a45}
 .faq details:hover{background:#342519}
 .faq details p{color:#d2c0a7}
+
+/* Mobile 2026-10-24: imagem entra na primeira dobra sem duplicar arquivos. */
+.hero-slide-controls button[data-hero-toggle]{min-width:34px;font-size:12px;font-weight:700}
+@media (max-width:700px){
+  .hero-luxe-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0;min-height:0;padding:18px 0 52px;align-items:start}
+  .hero-luxe-copy{display:contents}
+  .hero-luxe-copy>.overline{grid-column:1;grid-row:1;margin:0 0 15px;line-height:1.55;font-size:10px;letter-spacing:.11em}
+  .hero-luxe-media{grid-column:1;grid-row:2;width:min(100%,440px);height:clamp(280px,78vw,380px);margin:0 auto 6px;animation-duration:.6s}
+  .hero-luxe-media:hover .hero-portrait-frame{transform:none}
+  .hero-portrait-frame{right:0;top:0;width:78%;height:100%}
+  .hero-detail{left:0;bottom:6%;width:39%;height:42%}
+  .hero-luxe-copy>h1{grid-column:1;grid-row:3;font-size:clamp(38px,9.5vw,55px);line-height:1.06;margin:18px 0 13px;max-width:580px}
+  .hero-luxe-copy>.hero-deck{grid-column:1;grid-row:4;max-width:540px;font-size:14px;line-height:1.65;margin:0 0 18px}
+  .hero-luxe-copy>.hero-actions{grid-column:1;grid-row:5;margin:0;display:flex;flex-direction:row;align-items:center;gap:15px 20px}
+  .hero-luxe-copy>.hero-service-links{grid-column:1;grid-row:6;margin:22px 0 0}
+  .hero-luxe-copy>.hero-signature{grid-column:1;grid-row:7;margin:24px 0 0}
+  .hero-slide-badge{bottom:17%}
+}
