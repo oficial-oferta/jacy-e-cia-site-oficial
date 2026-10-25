@@ -193,3 +193,25 @@ body[data-page] .page-hero-ornament{border-color:#b78c4b}
 }
 @media(max-width:390px){.extras-luxe-grid{grid-template-columns:1fr}.extras-luxe-card{min-height:0;padding:20px 22px}.extras-luxe-symbol{margin:10px 0 8px}}
 @media(prefers-reduced-motion:reduce){.extras-luxe-card{transition:none}}
+
+/* V6 — Instagram oficial: ícone discreto, visível também no celular. */
+.nav-social{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border:1px solid #c49b58a0;border-radius:14px;background:#d7ae6311;color:#e8c584;transition:border-color .2s ease,background .2s ease,transform .2s ease}
+.nav-social svg{width:19px;height:19px;display:block;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-social:hover,.nav-social:focus-visible{background:#d7ae6337;border-color:#edc67c;color:#ffe2a4;transform:translateY(-1px)}
+@media(max-width:1220px){
+  .navcta{display:none}
+  .menu{display:block}
+  .navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:#100c09;padding:18px 25px 24px;flex-direction:column;align-items:stretch;gap:0;max-height:calc(100dvh - 90px);overflow-y:auto;overscroll-behavior:contain;border-bottom:1px solid #d7ae6340;box-shadow:0 18px 32px #0008}
+  .navlinks.open{display:flex}
+  .navlinks>a,.nav-dropdown>summary{display:block;padding:14px 0;border-bottom:1px solid #d7ae633d;color:#f1e6d5;font-size:15px}
+  .nav-dropdown summary:after{float:right}
+  .dropdown-panel,.nav-dropdown--wellness .dropdown-panel{position:static;left:auto;right:auto;width:auto;background:#281a10;box-shadow:none;border:0;border-radius:10px;padding:3px 13px}
+  .dropdown-panel a{display:block;font-size:14px;color:#f2ddb8}
+}
+@media(max-width:760px){
+  .navrow{gap:10px}
+  .nav-social{width:39px;height:39px;border-radius:12px;margin-left:auto}
+  .menu{flex:none;min-width:42px;min-height:39px}
+}
+@media(max-width:370px){.navrow{gap:7px}.brandword{font-size:19px}.branddesc{letter-spacing:.18em}.brand{gap:6px}}
+@media(prefers-reduced-motion:reduce){.nav-social{transition:none}}

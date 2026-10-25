@@ -13,8 +13,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   const toggle=media.querySelector("[data-hero-toggle]");
   const labels=["Mechas e luzes","Progressiva","Terapia capilar","Dia da noiva"];
   const reduced=window.matchMedia("(prefers-reduced-motion: reduce)");
-  const finePointer=window.matchMedia("(hover: hover) and (pointer: fine)");
-  let current=0,interval=null,hoverPaused=false,userPaused=reduced.matches;
+  let current=0,interval=null,userPaused=reduced.matches;
 
   function show(value){
     current=(value+slides.length)%slides.length;
@@ -31,7 +30,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   }
   function start(){
     stop();
-    if(!userPaused&&!hoverPaused&&!document.hidden){
+    if(!userPaused&&!document.hidden){
       interval=window.setInterval(()=>show(current+1),4200);
     }
   }
@@ -45,11 +44,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   if(previous)previous.addEventListener("click",()=>{show(current-1);start()});
   if(next)next.addEventListener("click",()=>{show(current+1);start()});
   if(toggle)toggle.addEventListener("click",()=>{userPaused=!userPaused;syncToggle();start()});
-  // Evita que o toque no iPhone deixe o carrossel travado em estado de hover/foco.
-  media.addEventListener("mouseenter",()=>{
-    if(finePointer.matches){hoverPaused=true;stop()}
-  });
-  media.addEventListener("mouseleave",()=>{hoverPaused=false;start()});
+  // O autoplay funciona no desktop mesmo quando o cursor permanece sobre a foto.
   document.addEventListener("visibilitychange",start);
   if(reduced.addEventListener){
     reduced.addEventListener("change",()=>{userPaused=reduced.matches;syncToggle();start()});
