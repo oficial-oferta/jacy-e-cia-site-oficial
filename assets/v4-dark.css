@@ -116,3 +116,20 @@ body[data-page] .page-hero-ornament{border-color:#b78c4b}
 .float-wa{background:linear-gradient(110deg,#f2d892,#c59449);color:#1a1008;box-shadow:0 12px 30px #0009;border:1px solid #f6e0a9}
 .float-wa:hover{background:#f5dd9d;color:#120b05}
 @media(max-width:700px){.hero-slide-controls{top:3%;right:3%;bottom:auto}.hero-slide-badge{bottom:17%}.hero-signature img{width:78px;height:78px}}
+
+/* Contraste das páginas internas após a troca de paleta. */
+.detail-grid .copy,.category-copy p{color:#d3c4ae}
+.detail-side{background:#241910;color:#f7ead8;border:1px solid #a77b43;border-top:3px solid #d7ae63}
+.detail-side p,.detail-side small{color:#d5c3a9}
+.interior-editorial{background:#17110d;color:#f7ead8}
+.interior-editorial:nth-of-type(even){background:#261a11}
+.interior-editorial p{color:#d1bfa7}
+.interior-editorial .eyebrow,.detail-grid .eyebrow,.faq .eyebrow{color:#dbb775}
+.category-link{background:#241910;color:#f7ead8;border-color:#b5874d}
+.category-link:hover{background:#332416;box-shadow:0 16px 34px #0006}
+.category-link p{color:#d0bea5}
+.category-link span{color:#e4c17c}
+.faq{background:#17110d;color:#f7ead8}
+.faq details{background:#261b13;color:#f7ead8;border-color:#a67a45}
+.faq details:hover{background:#342519}
+.faq details p{color:#d2c0a7}
