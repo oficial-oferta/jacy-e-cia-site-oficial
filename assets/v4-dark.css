@@ -151,3 +151,45 @@ body[data-page] .page-hero-ornament{border-color:#b78c4b}
   .hero-luxe-copy>.hero-signature{grid-column:1;grid-row:7;margin:24px 0 0}
   .hero-slide-badge{bottom:17%}
 }
+
+/* V5: serviços complementares e menus organizados. */
+.nav-dropdown--wellness .dropdown-panel{left:auto;right:-14px}
+.nav-dropdown[open]>summary{color:#f1d69b}
+.navlinks details summary:focus-visible{outline:2px solid #d7ae63;outline-offset:5px}
+.extras-luxe{padding:90px 0 96px;background:linear-gradient(145deg,#0d0a08,#21160f);border-top:1px solid #d7ae633d;border-bottom:1px solid #d7ae633d;color:#f5e8d2}
+.extras-luxe-heading{display:grid;grid-template-columns:1.45fr 1fr;gap:40px;align-items:end;margin:0 0 34px}
+.extras-luxe-heading h2{font:normal clamp(35px,4.7vw,65px)/1.1 var(--font);letter-spacing:-.047em;margin:12px 0 0;max-width:770px}
+.extras-luxe-heading h2 em{color:#dab575;font-weight:normal}
+.extras-luxe-heading p{color:#cfc0a8;line-height:1.7;font-size:15px;max-width:395px;margin:0 0 4px}
+.extras-luxe-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.extras-luxe-card{position:relative;display:flex;flex-direction:column;align-items:start;min-height:265px;padding:27px 23px 24px;border-radius:22px;border:1px solid #d7ae6348;background:linear-gradient(145deg,#322216,#1b130e);box-shadow:0 12px 30px #0003;transition:transform .3s ease,border-color .3s ease,background .3s ease}
+.extras-luxe-card:hover,.extras-luxe-card:focus-visible{transform:translateY(-5px);border-color:#f0cc89;background:linear-gradient(145deg,#412d1a,#221810)}
+.extras-luxe-number{color:#e0bb7d;font:600 10px/1.5 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.extras-luxe-symbol{font:normal 35px/1 var(--font);color:#d5aa62;margin:23px 0 11px}
+.extras-luxe-card strong{color:#f8efdd;font:normal clamp(22px,2.1vw,30px)/1.14 var(--font);letter-spacing:-.025em}
+.extras-luxe-desc{font-size:12px;line-height:1.65;color:#cdbda6;margin:12px 0 18px}
+.extras-luxe-arrow{font-size:11px;font-weight:700;letter-spacing:.04em;color:#e9ca8c;margin-top:auto}
+@media(max-width:1120px){
+  .navcta{display:none}
+  .menu{display:block}
+  .navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:#100c09;padding:18px 25px 24px;flex-direction:column;align-items:stretch;gap:0;max-height:calc(100dvh - 90px);overflow-y:auto;overscroll-behavior:contain;border-bottom:1px solid #d7ae6340;box-shadow:0 18px 32px #0008}
+  .navlinks.open{display:flex}
+  .navlinks>a,.nav-dropdown>summary{display:block;padding:14px 0;border-bottom:1px solid #d7ae633d;color:#f1e6d5;font-size:15px}
+  .nav-dropdown summary:after{float:right}
+  .dropdown-panel,.nav-dropdown--wellness .dropdown-panel{position:static;left:auto;right:auto;width:auto;background:#281a10;box-shadow:none;border:0;border-radius:10px;padding:3px 13px}
+  .dropdown-panel a{display:block;font-size:14px;color:#f2ddb8}
+  .extras-luxe-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .extras-luxe-card{min-height:225px}
+  .extras-luxe-symbol{margin:15px 0 9px}
+}
+@media(max-width:700px){
+  .extras-luxe{padding:58px 0 65px}
+  .extras-luxe-heading{grid-template-columns:1fr;gap:14px;margin-bottom:25px}
+  .extras-luxe-heading p{max-width:580px}
+  .extras-luxe-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .extras-luxe-card{border-radius:16px;padding:20px 14px;min-height:255px}
+  .extras-luxe-card strong{font-size:24px}
+  .extras-luxe-desc{font-size:11px}
+}
+@media(max-width:390px){.extras-luxe-grid{grid-template-columns:1fr}.extras-luxe-card{min-height:0;padding:20px 22px}.extras-luxe-symbol{margin:10px 0 8px}}
+@media(prefers-reduced-motion:reduce){.extras-luxe-card{transition:none}}
