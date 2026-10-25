@@ -108,3 +108,11 @@ body[data-page] .page-hero-ornament{border-color:#b78c4b}
   .hero-slide{transition:none!important;transform:none!important}
   .hero-service-links a{transition:none}
 }
+/* Ajustes finais de camadas e assinatura. */
+.hero-detail{z-index:4}
+.hero-slide-controls{top:3%;bottom:auto;right:3%}
+.hero-slide-badge{bottom:17%}
+.hero-signature img{width:94px;height:94px;mix-blend-mode:normal;background:#000;border:1px solid #d7ae6366;border-radius:13px;padding:3px;box-shadow:0 10px 28px #0006}
+.float-wa{background:linear-gradient(110deg,#f2d892,#c59449);color:#1a1008;box-shadow:0 12px 30px #0009;border:1px solid #f6e0a9}
+.float-wa:hover{background:#f5dd9d;color:#120b05}
+@media(max-width:700px){.hero-slide-controls{top:3%;right:3%;bottom:auto}.hero-slide-badge{bottom:17%}.hero-signature img{width:78px;height:78px}}
